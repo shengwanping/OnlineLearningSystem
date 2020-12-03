@@ -1,0 +1,43 @@
+{
+  "name" : "TeacherClassCourse",
+  "originTableName" : "teacher_class_course",
+  "comment" : null,
+  "fullColumn" : [ {
+    "name" : "id",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "userNo",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "classNo",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "courseId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.swp",
+  "savePath" : "./src/main/java/com/swp",
+  "saveModelName" : "OnlineLearningSystem"
+}

@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:  #设置上传文件大小
+      max-file-size: 800MB
+      max-request-size: 800MB
+  thymeleaf:
+    prefix:   classpath:/templates/   #模板路径,因为配置了webapp为web默认路径，可以设置为classpath:/templates/
+    suffix: .html                     #模板后缀
+    servlet:
+      content-type: text/html     #设置响应类型（必须）
+    encoding: utf-8                   #编码方式
+    mode: HTML5                       #校验H5格式
+    cache: false                      #关闭缓存，在开发过程中可以立即看到页面修改的结果
+#-------mysql新版本的写法-------
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: "jdbc:mysql://localhost:3306/ols?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true"
+  #-------Spring Boot默认的静态资源路径，file:${web.upload-path}指向外部的文件资源上传路径。该路径下的静态资源可以直接对外提供HTTP访问服务。-------
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml #配置mapper的位置
+  type-aliases-package: com.swp.entity #配置这个了在mapping里面就不用写包名
+
+web:
+  upload-path: D:\OnlineLearningSystem\src\main\webapp\uploads\  #  与项目代码分离的静态资源路径，即：文件上传保存根路径
+
+

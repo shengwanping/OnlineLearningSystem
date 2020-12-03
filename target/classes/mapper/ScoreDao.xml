@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swp.dao.ScoreDao">
+
+    <resultMap id="BaseResultMap" type="Score">
+        <!--@Table score-->
+        <result property="scoreId" column="score_id" jdbcType="INTEGER"/>
+        <result property="userNo" column="user_no" jdbcType="INTEGER"/>
+        <result property="courseId" column="course_id" jdbcType="INTEGER"/>
+        <result property="testSection" column="test_section" jdbcType="VARCHAR"/>
+        <result property="testSectionScore" column="test_section_score" jdbcType="VARCHAR"/>
+        <result property="maxTime" column="max_time" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <resultMap id="queryByScore" type="com.swp.entity.Test">
+        <!--@Table test-->
+        <result property="userNo" column="user_no" jdbcType="INTEGER"/>
+        <result property="courseId" column="course_id" jdbcType="INTEGER"/>
+        <result property="courseSection" column="course_section" jdbcType="VARCHAR"/>
+        <result property="testTopic" column="test_topic" jdbcType="VARCHAR"/>
+        <result property="testOptionA" column="test_option_A" jdbcType="VARCHAR"/>
+        <result property="testOptionB" column="test_option_B" jdbcType="VARCHAR"/>
+        <result property="testOptionC" column="test_option_C" jdbcType="VARCHAR"/>
+        <result property="testOptionD" column="test_option_D" jdbcType="VARCHAR"/>
+        <result property="testAnswer" column="test_answer" jdbcType="VARCHAR"/>
+        <association property="answer" column="" javaType="Answer">
+            <result property="userNo" column="user_no" jdbcType="INTEGER"/>
+            <result property="optionAnswer" column="option_answer" jdbcType="VARCHAR"/>
+        </association>
+        <association property="score" column="" javaType="Score">
+            <result property="testSectionScore" column="test_section_score" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="ProgressMap" type="Progress">
+        <result property="progressId" column="progress_id" jdbcType="INTEGER"/>
+        <result property="userNo" column="user_no" jdbcType="INTEGER"/>
+        <result property="courseId" column="course_id" jdbcType="INTEGER"/>
+        <result property="testSection" column="test_section" jdbcType="VARCHAR"/>
+        <result property="maxTime" column="max_time" jdbcType="INTEGER"/>
+    </resultMap>
+    <!--给视频增加学习进度-->
+    <insert id="insertByUser" parameterType="Progress">
+        insert into progress(user_no,course_id,test_section)
+        values(#{userNo},#{courseId},#{testSection})
+    </insert>
+   <update id="insertByMaxTime" parameterType="Progress">
+       UPDATE progress SET max_time=#{maxTime}
+        WHERE user_no=#{userNo}
+        AND course_id=#{courseId}
+        AND test_section=#{testSection}
+   </update>
+    <select id="queryMaxTime" resultType="int" parameterType="Progress">
+        SELECT max_time FROM progress
+        WHERE user_no=#{userNo}
+        AND course_id=#{courseId}
+        AND test_section=#{testSection}
+    </select>
+    <!--给视频增加学习进度 end-->
+
+    <insert id="insert" >
+       insert into score(user_no,course_id,test_section,test_section_score)
+       values(#{userNo},#{courseId},#{testSection},#{testSectionScore})
+   </insert>
+
+    <select id="queryScore" resultMap="queryByScore" parameterType="Test">
+        SELECT * FROM score s,answer a,test t
+        WHERE s.user_no=a.user_no
+        AND s.course_id=a.course_id
+        AND s.test_section=a.test_section
+
+
+        AND a.test_topic=t.test_topic
+        AND a.course_id=t.course_id
+        AND a.test_section=t.course_section
+
+        AND s.user_no=#{score.userNo}
+        AND t.course_id=#{courseId}
+        AND t.course_section=#{courseSection}
+        AND t.user_no=#{userNo}
+    </select>
+</mapper>

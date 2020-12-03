@@ -1,0 +1,91 @@
+{
+  "name" : "PublishCourse",
+  "originTableName" : "publish_course",
+  "comment" : null,
+  "fullColumn" : [ {
+    "name" : "publishCourseId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "courseId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "courseSection",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "sectionVideo",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "sectionCourseware",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "testSection",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "courseStatus",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "courseSemester",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "startTime",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Date",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "endTime",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Date",
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.swp",
+  "savePath" : "./src/main/java/com/swp",
+  "saveModelName" : "OnlineLearningSystem"
+}

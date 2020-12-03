@@ -1,0 +1,59 @@
+{
+  "name" : "Answer",
+  "originTableName" : "answer",
+  "comment" : null,
+  "fullColumn" : [ {
+    "name" : "answerId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "userNo",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "courseId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "testSection",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "testTopic",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "optionAnswer",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.swp",
+  "savePath" : "./src/main/java/com/swp",
+  "saveModelName" : "OnlineLearningSystem"
+}

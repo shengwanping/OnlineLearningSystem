@@ -1,0 +1,51 @@
+{
+  "name" : "Progress",
+  "originTableName" : "progress",
+  "comment" : null,
+  "fullColumn" : [ {
+    "name" : "progressId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "userNo",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "courseId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "testSection",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "maxTime",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.swp",
+  "savePath" : "./src/main/java/com/swp",
+  "saveModelName" : "OnlineLearningSystem"
+}

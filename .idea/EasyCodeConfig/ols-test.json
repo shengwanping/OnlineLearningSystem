@@ -1,0 +1,91 @@
+{
+  "name" : "Test",
+  "originTableName" : "test",
+  "comment" : null,
+  "fullColumn" : [ {
+    "name" : "testId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "userNo",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "courseId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "courseSection",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "testTopic",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "testOptionA",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "testOptionB",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "testOptionC",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "testOptionD",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "testAnswer",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.swp",
+  "savePath" : "./src/main/java/com/swp",
+  "saveModelName" : "OnlineLearningSystem"
+}

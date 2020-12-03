@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swp.dao.TeacherClassCourseDao">
+
+    <resultMap id="TeacherResultMap" type="TeacherClassCourse">
+        <!--@Table teacher_class_course-->
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="userNo" column="user_no" jdbcType="INTEGER"/>
+        <result property="classNo" column="class_no" jdbcType="INTEGER"/>
+        <result property="courseId" column="course_id" jdbcType="INTEGER"/>
+    </resultMap>
+    <resultMap id="CourseResultMap" type="Course">
+        <!--@Table course-->
+        <result property="courseId" column="course_id" jdbcType="INTEGER"/>
+        <result property="courseName" column="course_name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询教师所教课程-->
+    <select id="queryById" resultMap="CourseResultMap">
+        SELECT
+             c.course_id,c.course_name
+        FROM teacher_class_course tcc,course c
+        WHERE tcc.user_no = #{userNo}
+        AND tcc.course_id=c.course_id
+        AND tcc.course_id
+            NOT IN
+            (SELECT pc.course_id
+            FROM publish_course pc
+            WHERE pc.user_no = #{userNo}
+            GROUP BY  pc.course_id
+            )
+         GROUP BY  c.course_id
+
+    </select>
+
+</mapper>

@@ -1,0 +1,59 @@
+{
+  "name" : "Menu",
+  "originTableName" : "menu",
+  "comment" : null,
+  "fullColumn" : [ {
+    "name" : "menuId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "parentId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "menuIcon",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "menuLink",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "menuLevel",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "menuName",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "String",
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.swp",
+  "savePath" : "./src/main/java/com/swp",
+  "saveModelName" : "OnlineLearningSystem"
+}
