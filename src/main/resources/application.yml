@@ -1,5 +1,17 @@
 server:
-  port: 8080
+  port: 8081
+  tomcat:
+    uri-encoding: UTF-8
+    # 最大线程数，最好大于max-connections，否则会出现占位等待情况
+    max-threads: 5
+    # 等待队列长度，默认100
+    accept-count: 2
+    # 最大连接数，相当于最大可同时执行任务的数量，如果高于max-threads会出现等待线程情况
+    max-connections: 5
+    # 初始至少会建立的线程数
+    min-spare-threads: 2
+    # Connector从接受连接到提交URI的等待的时间。
+    connection-timeout: 2000
 
 spring:
   servlet:
